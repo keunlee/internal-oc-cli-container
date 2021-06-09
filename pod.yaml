@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: internal-oc-container
+spec:
+  serviceAccountName: internal-oc-container
+  containers:
+    - name: internal-oc-container
+      image: quay.io/kelee/internal-oc-container:latest
+      command: ["/bin/sh", "-c", "tail -f /dev/null"]
